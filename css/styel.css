@@ -1,0 +1,82 @@
+body{
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    z-index: 11;
+    width: fit-content;
+    
+}
+h1::after{
+    content: "";
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5585b5;
+    transition: all 400ms;
+    z-index: -1;
+}
+h1:hover::after{
+    height:70%;
+}
+h2{
+    width: fit-content;
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+ul{
+    list-style: none;
+    
+}
+span
+{
+
+display: flex;
+align-items: center;
+justify-content: center;
+margin-inline:10px ;
+width: 1.625rem;
+height: 1.625rem;
+border-radius: 100vh;
+border: solid red 1px;
+}
+span i{
+    color: red;
+}
+
+dialog .iconsCard .greeen{
+color: green;
+}
+dialog .iconsCard .yelloo{
+    color: yellow;
+}
+dialog .iconsCard .reed{
+    color: red;
+
+}
+.masigError{
+    z-index: 999999999999;
+}
+.btn-main
+{
+    background-color: #5585b5;
+    color: #eee;
+    
+}
+.btn-delet
+{
+    background-color: #b5ac49;
+    color: #eee;
+}
+.btn:hover
+{
+color: #e0ffcd;
+background-color: #bbe4e9;
+}

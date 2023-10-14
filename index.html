@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/styel.css">
+    <!-- <===========================================================> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- <===========================================================> -->
+    <title>Document</title>
+</head>
+<body>
+    <main class="container pt-4 ">
+        <div class=" mb-5 border-3 border-black border-bottom">
+            <h1 class="display-4 position-relative mb-5 mx-auto" >Bookmarker</h1>
+        </div>
+        <div class="mb-5 border-3 border-black border-bottom">
+            <h2 class=" mx-auto">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites 
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="my-4 w-100">
+                <label for="siteName"> 
+                    <i class="fa-solid fa-book-bookmark pe-2"></i>
+                    Site Name
+                </label>
+            <input type="text" name=" siteName" id="siteName" class="siteName form-control w-100 " placeholder="BookeMarke Name">
+            </div>
+            <small class="errorSiteName text-danger d-none " id="error">must start capital letter and {3-8} smalle letter in the end</small>
+            <div class="masigError d-none z-3 position-absolute layer d-flex justify-content-center align-items-center  bg-black bg-opacity-75  top-0 end-0 start-0 bottom-0">
+                <dialog open class="  position-absolute p-5 border rounded bg-light  position-relative ">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="iconsCard ">
+                            <i class="fa-solid fa-circle reed"></i>
+                            <i class="fa-solid fa-circle yelloo"></i>
+                            <i class="fa-solid fa-circle greeen"></i>
+                            </div>
+                            <button class="btnMasig small border-0  "><i class="fa-solid fa-xmark text-dark "></i></button>
+                    </div>
+                    Site Name or Url is not valid, Please follow the <br> rules below :
+                    <ul>
+                        <li class="py-3 d-flex justify-content-center align-items-center"><span><i class="fa-solid fa-arrow-right border-danger rounded-circle"></i></span>SitName must start capital letter and {3-8} smalle letter in the end</li>
+                        <li class=" d-flex align-items-center" ><span><i class="fa-solid fa-arrow-right border-danger rounded-circle"></i></span>URL Must start{4,8}letter and end .com</li>
+                    </ul>
+                </dialog>
+            </div>
+            <div class="inPute2 my-4">
+                <label for="sitUrl">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    Site URL</label>
+            <input type="text" name=" sitUrl" id="sitUrl" class="urlSit form-control w-100 " placeholder="wibsite URL">
+            </div>
+            <small class="errorUrl text-danger d-none " id="urlError">Must start{4,8}letter and end .com</small>
+           <div class="d-flex justify-content-center mb-5">
+            <button class="btn btn-main btn-lg px-5" onclick="getBookName()">
+                Submite
+            </button>
+           </div>
+        </div>
+        <input type="text"  id="search" placeholder="Search .." oninput="searchBook(this.value)" class="form-control w-75 mx-auto mb-4 shadow">
+        <div>
+            <table class="table text-center">
+                <thead>
+                     <th>Index</th>
+                     <th>Wedsite Name</th>
+                     <th>Visite</th>
+                     <th>Delete</th>
+                </thead>
+                <tbody id="tBody">
+                    
+                </tbody>
+
+            </table>
+        </div>
+
+    </main>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
